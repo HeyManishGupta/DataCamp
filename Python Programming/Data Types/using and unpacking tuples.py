@@ -17,11 +17,11 @@ Print the rank, girl name, and boy name, in that order. The rank is contained in
 """
 
 # Pair up the girl and boy names: pairs
-pairs = zip(girl_names, boy_names)
+pairs = list(zip(girl_names, boy_names))
 
 # Iterate over pairs
-for pos, value in enumerate(pairs):
+for idx, pair in enumerate(pairs):
     # Unpack pair: girl_name, boy_name
-    girl_name, boy_name = value
+    girl_name, boy_name = pair
     # Print the rank and names associated with each rank
     print('Rank {}: {} and {}'.format(idx, girl_name, boy_name))
