@@ -1,0 +1,28 @@
+/*
+You can use parentheses to make the intention of your code clearer. This becomes very important when using AND and OR clauses, to ensure your queries return the exact subsets you need.
+
+Instructions
+------------
+Select all artists beginning with B who released tracks in 1986, but also retrieve any records where the release_year is greater than 1990.
+
+*/
+
+SELECT 
+  artist, 
+  release_year, 
+  song 
+FROM 
+  songlist 
+  -- Choose the correct artist and specify the release year
+WHERE 
+  (
+    artist LIKE 'B%' 
+    and release_year = 1986 
+  ) 
+  -- Or return all songs released after 1990
+  or release_year > 1990 
+  -- Order the results
+ORDER BY 
+  release_year, 
+  artist, 
+  song;
